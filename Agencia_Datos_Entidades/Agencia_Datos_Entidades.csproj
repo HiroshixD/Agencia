@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E08D2D7B-2FB6-436F-A319-1F21FEC48752}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Agencia_Datos_Entidades</RootNamespace>
+    <AssemblyName>Agencia_Datos_Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Agencia.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Cliente.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contrato.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Control_Electrodomesticos.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Control_Electrodomestico_Empleado.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Documentos.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentoxEmpleado.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Doc_Identidad.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado_Detalle.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Estudios.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HabilidadEmpleado.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Habilidades.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Idiomas.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MenuEmpleado.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Menus.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Religion.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServicioEmpleado.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Servicios.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoUsuario.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ubigeo.cs">
+      <DependentUpon>Agencia.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Agencia.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Agencia.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

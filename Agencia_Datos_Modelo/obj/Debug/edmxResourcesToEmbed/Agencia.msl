@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AgenciaModeloStoreContainer" CdmEntityContainer="AgenciaContext">
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="AgenciaModelo.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="IDCliente" ColumnName="IDCliente" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Ape_Pat" ColumnName="Ape_Pat" />
+          <ScalarProperty Name="Ape_Mat" ColumnName="Ape_Mat" />
+          <ScalarProperty Name="NombresCompletos" ColumnName="NombresCompletos" />
+          <ScalarProperty Name="Nro_Documento" ColumnName="Nro_Documento" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+          <ScalarProperty Name="E_mail" ColumnName="E_mail" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Estado_Civil" ColumnName="Estado_Civil" />
+          <ScalarProperty Name="IdUbigeo" ColumnName="IdUbigeo" />
+          <ScalarProperty Name="IDTipoUsuario" ColumnName="IDTipoUsuario" />
+          <ScalarProperty Name="IDReligion" ColumnName="IDReligion" />
+          <ScalarProperty Name="IDDoc_Identidad" ColumnName="IDDoc_Identidad" />
+          <ScalarProperty Name="IDIdioma" ColumnName="IDIdioma" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contrato">
+      <EntityTypeMapping TypeName="AgenciaModelo.Contrato">
+        <MappingFragment StoreEntitySet="Contrato">
+          <ScalarProperty Name="IDContrato" ColumnName="IDContrato" />
+          <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+          <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+          <ScalarProperty Name="IDEmpleado" ColumnName="IDEmpleado" />
+          <ScalarProperty Name="IDCliente" ColumnName="IDCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Control_Electrodomestico_Empleado">
+      <EntityTypeMapping TypeName="AgenciaModelo.Control_Electrodomestico_Empleado">
+        <MappingFragment StoreEntitySet="Control_Electrodomestico_Empleado">
+          <ScalarProperty Name="IDCEE" ColumnName="IDCEE" />
+          <ScalarProperty Name="IDEmpleado" ColumnName="IDEmpleado" />
+          <ScalarProperty Name="IDControl_Electrodomesticos" ColumnName="IDControl_Electrodomesticos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Control_Electrodomesticos">
+      <EntityTypeMapping TypeName="AgenciaModelo.Control_Electrodomesticos">
+        <MappingFragment StoreEntitySet="Control_Electrodomesticos">
+          <ScalarProperty Name="IdControl_Electrodomesticos" ColumnName="IdControl_Electrodomesticos" />
+          <ScalarProperty Name="Electrodomestico" ColumnName="Electrodomestico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doc_Identidad">
+      <EntityTypeMapping TypeName="AgenciaModelo.Doc_Identidad">
+        <MappingFragment StoreEntitySet="Doc_Identidad">
+          <ScalarProperty Name="IDDoc_Identidad" ColumnName="IDDoc_Identidad" />
+          <ScalarProperty Name="Documento" ColumnName="Documento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documentos">
+      <EntityTypeMapping TypeName="AgenciaModelo.Documentos">
+        <MappingFragment StoreEntitySet="Documentos">
+          <ScalarProperty Name="IDDocumento" ColumnName="IDDocumento" />
+          <ScalarProperty Name="Tipo_Documento" ColumnName="Tipo_Documento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentoxEmpleado">
+      <EntityTypeMapping TypeName="AgenciaModelo.DocumentoxEmpleado">
+        <MappingFragment StoreEntitySet="DocumentoxEmpleado">
+          <ScalarProperty Name="IDDocxempleado" ColumnName="IDDocxempleado" />
+          <ScalarProperty Name="IDDocumento" ColumnName="IDDocumento" />
+          <ScalarProperty Name="IDEmpleado" ColumnName="IDEmpleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empleado">
+      <EntityTypeMapping TypeName="AgenciaModelo.Empleado">
+        <MappingFragment StoreEntitySet="Empleado">
+          <ScalarProperty Name="IDEmpleado" ColumnName="IDEmpleado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Ape_Pat" ColumnName="Ape_Pat" />
+          <ScalarProperty Name="Ape_Mat" ColumnName="Ape_Mat" />
+          <ScalarProperty Name="NombresCompletos" ColumnName="NombresCompletos" />
+          <ScalarProperty Name="Nro_Documento" ColumnName="Nro_Documento" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+          <ScalarProperty Name="E_mail" ColumnName="E_mail" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Estado_Civil" ColumnName="Estado_Civil" />
+          <ScalarProperty Name="IdUbigeo" ColumnName="IdUbigeo" />
+          <ScalarProperty Name="IDTipoUsuario" ColumnName="IDTipoUsuario" />
+          <ScalarProperty Name="IDReligion" ColumnName="IDReligion" />
+          <ScalarProperty Name="IdDoc_Identidad" ColumnName="IdDoc_Identidad" />
+          <ScalarProperty Name="IDIdioma" ColumnName="IDIdioma" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empleado_Detalle">
+      <EntityTypeMapping TypeName="AgenciaModelo.Empleado_Detalle">
+        <MappingFragment StoreEntitySet="Empleado_Detalle">
+          <ScalarProperty Name="IDEmpleadoDetalle" ColumnName="IDEmpleadoDetalle" />
+          <ScalarProperty Name="Fecha_Disponibilidad" ColumnName="Fecha_Disponibilidad" />
+          <ScalarProperty Name="Modalidad" ColumnName="Modalidad" />
+          <ScalarProperty Name="Experiencia" ColumnName="Experiencia" />
+          <ScalarProperty Name="Desc_Experiencia" ColumnName="Desc_Experiencia" />
+          <ScalarProperty Name="Experiencia_Recien_Nacidos" ColumnName="Experiencia_Recien_Nacidos" />
+          <ScalarProperty Name="Hobbies" ColumnName="Hobbies" />
+          <ScalarProperty Name="IDEmpleado" ColumnName="IDEmpleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estudios">
+      <EntityTypeMapping TypeName="AgenciaModelo.Estudios">
+        <MappingFragment StoreEntitySet="Estudios">
+          <ScalarProperty Name="IDEstudio" ColumnName="IDEstudio" />
+          <ScalarProperty Name="IDEmpleado" ColumnName="IDEmpleado" />
+          <ScalarProperty Name="Descripcion_Estudio" ColumnName="Descripcion_Estudio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HabilidadEmpleado">
+      <EntityTypeMapping TypeName="AgenciaModelo.HabilidadEmpleado">
+        <MappingFragment StoreEntitySet="HabilidadEmpleado">
+          <ScalarProperty Name="IdHabilidadEmpleado" ColumnName="IdHabilidadEmpleado" />
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="IDHabilidad" ColumnName="IDHabilidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Habilidades">
+      <EntityTypeMapping TypeName="AgenciaModelo.Habilidades">
+        <MappingFragment StoreEntitySet="Habilidades">
+          <ScalarProperty Name="IDHabilidad" ColumnName="IDHabilidad" />
+          <ScalarProperty Name="NombreHabilidad" ColumnName="NombreHabilidad" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Idiomas">
+      <EntityTypeMapping TypeName="AgenciaModelo.Idiomas">
+        <MappingFragment StoreEntitySet="Idiomas">
+          <ScalarProperty Name="IDIdioma" ColumnName="IDIdioma" />
+          <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuEmpleado">
+      <EntityTypeMapping TypeName="AgenciaModelo.MenuEmpleado">
+        <MappingFragment StoreEntitySet="MenuEmpleado">
+          <ScalarProperty Name="IDMenuEmpleado" ColumnName="IDMenuEmpleado" />
+          <ScalarProperty Name="IDEmpleado" ColumnName="IDEmpleado" />
+          <ScalarProperty Name="IDMenu" ColumnName="IDMenu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="AgenciaModelo.Menus">
+        <MappingFragment StoreEntitySet="Menus">
+          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
+          <ScalarProperty Name="Tipo_De_Plato" ColumnName="Tipo_De_Plato" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Religion">
+      <EntityTypeMapping TypeName="AgenciaModelo.Religion">
+        <MappingFragment StoreEntitySet="Religion">
+          <ScalarProperty Name="IDReligion" ColumnName="IDReligion" />
+          <ScalarProperty Name="NombreReligion" ColumnName="NombreReligion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicioEmpleado">
+      <EntityTypeMapping TypeName="AgenciaModelo.ServicioEmpleado">
+        <MappingFragment StoreEntitySet="ServicioEmpleado">
+          <ScalarProperty Name="IDServicioEmpleado" ColumnName="IDServicioEmpleado" />
+          <ScalarProperty Name="IDServicio" ColumnName="IDServicio" />
+          <ScalarProperty Name="IDEmpleado" ColumnName="IDEmpleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servicios">
+      <EntityTypeMapping TypeName="AgenciaModelo.Servicios">
+        <MappingFragment StoreEntitySet="Servicios">
+          <ScalarProperty Name="IDServicio" ColumnName="IDServicio" />
+          <ScalarProperty Name="NombreServicio" ColumnName="NombreServicio" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoUsuario">
+      <EntityTypeMapping TypeName="AgenciaModelo.TipoUsuario">
+        <MappingFragment StoreEntitySet="TipoUsuario">
+          <ScalarProperty Name="IDTipoUsuario" ColumnName="IDTipoUsuario" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ubigeo">
+      <EntityTypeMapping TypeName="AgenciaModelo.Ubigeo">
+        <MappingFragment StoreEntitySet="Ubigeo">
+          <ScalarProperty Name="IdUbigeo" ColumnName="IdUbigeo" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

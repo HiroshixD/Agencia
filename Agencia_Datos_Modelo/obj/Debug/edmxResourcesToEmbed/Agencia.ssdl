@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AgenciaModelo.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="IDCliente" />
+    </Key>
+    <Property Name="IDCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Ape_Pat" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Ape_Mat" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="NombresCompletos" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Nro_Documento" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Fecha_Nacimiento" Type="datetime" Nullable="false" />
+    <Property Name="E_mail" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Telefono" Type="varchar" MaxLength="12" />
+    <Property Name="Celular" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Estado_Civil" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="IdUbigeo" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="IDTipoUsuario" Type="int" Nullable="false" />
+    <Property Name="IDReligion" Type="int" Nullable="false" />
+    <Property Name="IDDoc_Identidad" Type="int" Nullable="false" />
+    <Property Name="IDIdioma" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contrato">
+    <Key>
+      <PropertyRef Name="IDContrato" />
+    </Key>
+    <Property Name="IDContrato" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fecha_Inicio" Type="datetime" Nullable="false" />
+    <Property Name="Fecha_Fin" Type="datetime" Nullable="false" />
+    <Property Name="IDEmpleado" Type="int" Nullable="false" />
+    <Property Name="IDCliente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Control_Electrodomestico_Empleado">
+    <Key>
+      <PropertyRef Name="IDCEE" />
+    </Key>
+    <Property Name="IDCEE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDEmpleado" Type="int" Nullable="false" />
+    <Property Name="IDControl_Electrodomesticos" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Control_Electrodomesticos">
+    <Key>
+      <PropertyRef Name="IdControl_Electrodomesticos" />
+    </Key>
+    <Property Name="IdControl_Electrodomesticos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Electrodomestico" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Doc_Identidad">
+    <Key>
+      <PropertyRef Name="IDDoc_Identidad" />
+    </Key>
+    <Property Name="IDDoc_Identidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Documento" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Documentos">
+    <Key>
+      <PropertyRef Name="IDDocumento" />
+    </Key>
+    <Property Name="IDDocumento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tipo_Documento" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentoxEmpleado">
+    <Key>
+      <PropertyRef Name="IDDocxempleado" />
+    </Key>
+    <Property Name="IDDocxempleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDDocumento" Type="int" Nullable="false" />
+    <Property Name="IDEmpleado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="IDEmpleado" />
+    </Key>
+    <Property Name="IDEmpleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Ape_Pat" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Ape_Mat" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="NombresCompletos" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Nro_Documento" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Fecha_Nacimiento" Type="datetime" Nullable="false" />
+    <Property Name="E_mail" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Telefono" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Celular" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Estado_Civil" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="IdUbigeo" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="IDTipoUsuario" Type="int" Nullable="false" />
+    <Property Name="IDReligion" Type="int" Nullable="false" />
+    <Property Name="IdDoc_Identidad" Type="int" Nullable="false" />
+    <Property Name="IDIdioma" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Empleado_Detalle">
+    <Key>
+      <PropertyRef Name="IDEmpleadoDetalle" />
+    </Key>
+    <Property Name="IDEmpleadoDetalle" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fecha_Disponibilidad" Type="datetime" Nullable="false" />
+    <Property Name="Modalidad" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Experiencia" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Desc_Experiencia" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Experiencia_Recien_Nacidos" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Hobbies" Type="varchar(max)" />
+    <Property Name="IDEmpleado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Estudios">
+    <Key>
+      <PropertyRef Name="IDEstudio" />
+    </Key>
+    <Property Name="IDEstudio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDEmpleado" Type="int" Nullable="false" />
+    <Property Name="Descripcion_Estudio" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HabilidadEmpleado">
+    <Key>
+      <PropertyRef Name="IdHabilidadEmpleado" />
+    </Key>
+    <Property Name="IdHabilidadEmpleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdEmpleado" Type="int" Nullable="false" />
+    <Property Name="IDHabilidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Habilidades">
+    <Key>
+      <PropertyRef Name="IDHabilidad" />
+    </Key>
+    <Property Name="IDHabilidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreHabilidad" Type="varchar" MaxLength="20" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Idiomas">
+    <Key>
+      <PropertyRef Name="IDIdioma" />
+    </Key>
+    <Property Name="IDIdioma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Idioma" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="MenuEmpleado">
+    <Key>
+      <PropertyRef Name="IDMenuEmpleado" />
+    </Key>
+    <Property Name="IDMenuEmpleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDEmpleado" Type="int" Nullable="false" />
+    <Property Name="IDMenu" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Menus">
+    <Key>
+      <PropertyRef Name="IdMenu" />
+    </Key>
+    <Property Name="IdMenu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tipo_De_Plato" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Religion">
+    <Key>
+      <PropertyRef Name="IDReligion" />
+    </Key>
+    <Property Name="IDReligion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreReligion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServicioEmpleado">
+    <Key>
+      <PropertyRef Name="IDServicioEmpleado" />
+    </Key>
+    <Property Name="IDServicioEmpleado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDServicio" Type="int" Nullable="false" />
+    <Property Name="IDEmpleado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Servicios">
+    <Key>
+      <PropertyRef Name="IDServicio" />
+    </Key>
+    <Property Name="IDServicio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreServicio" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoUsuario">
+    <Key>
+      <PropertyRef Name="IDTipoUsuario" />
+    </Key>
+    <Property Name="IDTipoUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ubigeo">
+    <Key>
+      <PropertyRef Name="IdUbigeo" />
+    </Key>
+    <Property Name="IdUbigeo" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Departamento" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Provincia" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Distrito" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="Contrato_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Contrato" Type="Self.Contrato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IDCliente" />
+      </Principal>
+      <Dependent Role="Contrato">
+        <PropertyRef Name="IDCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Contrato_Empleado">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="Contrato" Type="Self.Contrato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IDEmpleado" />
+      </Principal>
+      <Dependent Role="Contrato">
+        <PropertyRef Name="IDEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DocumentoxEmpleado_Documento">
+    <End Role="Documentos" Type="Self.Documentos" Multiplicity="1" />
+    <End Role="DocumentoxEmpleado" Type="Self.DocumentoxEmpleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documentos">
+        <PropertyRef Name="IDDocumento" />
+      </Principal>
+      <Dependent Role="DocumentoxEmpleado">
+        <PropertyRef Name="IDDocumento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DocumentoxEmpleado_Empleado">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="DocumentoxEmpleado" Type="Self.DocumentoxEmpleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IDEmpleado" />
+      </Principal>
+      <Dependent Role="DocumentoxEmpleado">
+        <PropertyRef Name="IDEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Empleado_Detalle_Empleado">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="Empleado_Detalle" Type="Self.Empleado_Detalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IDEmpleado" />
+      </Principal>
+      <Dependent Role="Empleado_Detalle">
+        <PropertyRef Name="IDEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Estudios_Empleado">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="Estudios" Type="Self.Estudios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IDEmpleado" />
+      </Principal>
+      <Dependent Role="Estudios">
+        <PropertyRef Name="IDEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Cliente_Idioma">
+    <End Role="Idiomas" Type="Self.Idiomas" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Idiomas">
+        <PropertyRef Name="IDIdioma" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IDIdioma" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Cliente_Ubigeo">
+    <End Role="Ubigeo" Type="Self.Ubigeo" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ubigeo">
+        <PropertyRef Name="IdUbigeo" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IdUbigeo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Control_Electrodomestico_Empleado_Control_Electrodomestico">
+    <End Role="Control_Electrodomesticos" Type="Self.Control_Electrodomesticos" Multiplicity="1" />
+    <End Role="Control_Electrodomestico_Empleado" Type="Self.Control_Electrodomestico_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Control_Electrodomesticos">
+        <PropertyRef Name="IdControl_Electrodomesticos" />
+      </Principal>
+      <Dependent Role="Control_Electrodomestico_Empleado">
+        <PropertyRef Name="IDControl_Electrodomesticos" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Control_Electrodomestico_Empleado_Empleado">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="Control_Electrodomestico_Empleado" Type="Self.Control_Electrodomestico_Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IDEmpleado" />
+      </Principal>
+      <Dependent Role="Control_Electrodomestico_Empleado">
+        <PropertyRef Name="IDEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Doc_Identidad_Cliente">
+    <End Role="Doc_Identidad" Type="Self.Doc_Identidad" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doc_Identidad">
+        <PropertyRef Name="IDDoc_Identidad" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IDDoc_Identidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Doc_Identidad_Empleado">
+    <End Role="Doc_Identidad" Type="Self.Doc_Identidad" Multiplicity="1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doc_Identidad">
+        <PropertyRef Name="IDDoc_Identidad" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdDoc_Identidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Empleado_Idioma">
+    <End Role="Idiomas" Type="Self.Idiomas" Multiplicity="1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Idiomas">
+        <PropertyRef Name="IDIdioma" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IDIdioma" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Empleado_Ubigeo">
+    <End Role="Ubigeo" Type="Self.Ubigeo" Multiplicity="1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ubigeo">
+        <PropertyRef Name="IdUbigeo" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdUbigeo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Habilidad_Empleado">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="HabilidadEmpleado" Type="Self.HabilidadEmpleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IDEmpleado" />
+      </Principal>
+      <Dependent Role="HabilidadEmpleado">
+        <PropertyRef Name="IdEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_HabilidadEmpleado_Habilidad">
+    <End Role="Habilidades" Type="Self.Habilidades" Multiplicity="1" />
+    <End Role="HabilidadEmpleado" Type="Self.HabilidadEmpleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Habilidades">
+        <PropertyRef Name="IDHabilidad" />
+      </Principal>
+      <Dependent Role="HabilidadEmpleado">
+        <PropertyRef Name="IDHabilidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_MenuEmpleado_Empleado">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="MenuEmpleado" Type="Self.MenuEmpleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IDEmpleado" />
+      </Principal>
+      <Dependent Role="MenuEmpleado">
+        <PropertyRef Name="IDEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_MenuEmpleado_Menu">
+    <End Role="Menus" Type="Self.Menus" Multiplicity="1" />
+    <End Role="MenuEmpleado" Type="Self.MenuEmpleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menus">
+        <PropertyRef Name="IdMenu" />
+      </Principal>
+      <Dependent Role="MenuEmpleado">
+        <PropertyRef Name="IDMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Religion_Cliente">
+    <End Role="Religion" Type="Self.Religion" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Religion">
+        <PropertyRef Name="IDReligion" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IDReligion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Religion_Empleado">
+    <End Role="Religion" Type="Self.Religion" Multiplicity="1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Religion">
+        <PropertyRef Name="IDReligion" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IDReligion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Tipo_Usuario_Cliente">
+    <End Role="TipoUsuario" Type="Self.TipoUsuario" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoUsuario">
+        <PropertyRef Name="IDTipoUsuario" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IDTipoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Tipo_Usuario_Empleado">
+    <End Role="TipoUsuario" Type="Self.TipoUsuario" Multiplicity="1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoUsuario">
+        <PropertyRef Name="IDTipoUsuario" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IDTipoUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ServicioEmpleado_Empleado">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="ServicioEmpleado" Type="Self.ServicioEmpleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IDEmpleado" />
+      </Principal>
+      <Dependent Role="ServicioEmpleado">
+        <PropertyRef Name="IDEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ServicioEmpleado_Servicio">
+    <End Role="Servicios" Type="Self.Servicios" Multiplicity="1" />
+    <End Role="ServicioEmpleado" Type="Self.ServicioEmpleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicios">
+        <PropertyRef Name="IDServicio" />
+      </Principal>
+      <Dependent Role="ServicioEmpleado">
+        <PropertyRef Name="IDServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AgenciaModeloStoreContainer">
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contrato" EntityType="Self.Contrato" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Control_Electrodomestico_Empleado" EntityType="Self.Control_Electrodomestico_Empleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Control_Electrodomesticos" EntityType="Self.Control_Electrodomesticos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Doc_Identidad" EntityType="Self.Doc_Identidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Documentos" EntityType="Self.Documentos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocumentoxEmpleado" EntityType="Self.DocumentoxEmpleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empleado_Detalle" EntityType="Self.Empleado_Detalle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Estudios" EntityType="Self.Estudios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HabilidadEmpleado" EntityType="Self.HabilidadEmpleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Habilidades" EntityType="Self.Habilidades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Idiomas" EntityType="Self.Idiomas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MenuEmpleado" EntityType="Self.MenuEmpleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menus" EntityType="Self.Menus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Religion" EntityType="Self.Religion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServicioEmpleado" EntityType="Self.ServicioEmpleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Servicios" EntityType="Self.Servicios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoUsuario" EntityType="Self.TipoUsuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ubigeo" EntityType="Self.Ubigeo" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Contrato_Cliente" Association="Self.Contrato_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Contrato" EntitySet="Contrato" />
+    </AssociationSet>
+    <AssociationSet Name="Contrato_Empleado" Association="Self.Contrato_Empleado">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="Contrato" EntitySet="Contrato" />
+    </AssociationSet>
+    <AssociationSet Name="DocumentoxEmpleado_Documento" Association="Self.DocumentoxEmpleado_Documento">
+      <End Role="Documentos" EntitySet="Documentos" />
+      <End Role="DocumentoxEmpleado" EntitySet="DocumentoxEmpleado" />
+    </AssociationSet>
+    <AssociationSet Name="DocumentoxEmpleado_Empleado" Association="Self.DocumentoxEmpleado_Empleado">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="DocumentoxEmpleado" EntitySet="DocumentoxEmpleado" />
+    </AssociationSet>
+    <AssociationSet Name="Empleado_Detalle_Empleado" Association="Self.Empleado_Detalle_Empleado">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="Empleado_Detalle" EntitySet="Empleado_Detalle" />
+    </AssociationSet>
+    <AssociationSet Name="Estudios_Empleado" Association="Self.Estudios_Empleado">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="Estudios" EntitySet="Estudios" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Cliente_Idioma" Association="Self.Fk_Cliente_Idioma">
+      <End Role="Idiomas" EntitySet="Idiomas" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Cliente_Ubigeo" Association="Self.Fk_Cliente_Ubigeo">
+      <End Role="Ubigeo" EntitySet="Ubigeo" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Control_Electrodomestico_Empleado_Control_Electrodomestico" Association="Self.Fk_Control_Electrodomestico_Empleado_Control_Electrodomestico">
+      <End Role="Control_Electrodomesticos" EntitySet="Control_Electrodomesticos" />
+      <End Role="Control_Electrodomestico_Empleado" EntitySet="Control_Electrodomestico_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Control_Electrodomestico_Empleado_Empleado" Association="Self.Fk_Control_Electrodomestico_Empleado_Empleado">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="Control_Electrodomestico_Empleado" EntitySet="Control_Electrodomestico_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Doc_Identidad_Cliente" Association="Self.Fk_Doc_Identidad_Cliente">
+      <End Role="Doc_Identidad" EntitySet="Doc_Identidad" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Doc_Identidad_Empleado" Association="Self.Fk_Doc_Identidad_Empleado">
+      <End Role="Doc_Identidad" EntitySet="Doc_Identidad" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Empleado_Idioma" Association="Self.Fk_Empleado_Idioma">
+      <End Role="Idiomas" EntitySet="Idiomas" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Empleado_Ubigeo" Association="Self.Fk_Empleado_Ubigeo">
+      <End Role="Ubigeo" EntitySet="Ubigeo" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Habilidad_Empleado" Association="Self.Fk_Habilidad_Empleado">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="HabilidadEmpleado" EntitySet="HabilidadEmpleado" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_HabilidadEmpleado_Habilidad" Association="Self.Fk_HabilidadEmpleado_Habilidad">
+      <End Role="Habilidades" EntitySet="Habilidades" />
+      <End Role="HabilidadEmpleado" EntitySet="HabilidadEmpleado" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_MenuEmpleado_Empleado" Association="Self.Fk_MenuEmpleado_Empleado">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="MenuEmpleado" EntitySet="MenuEmpleado" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_MenuEmpleado_Menu" Association="Self.Fk_MenuEmpleado_Menu">
+      <End Role="Menus" EntitySet="Menus" />
+      <End Role="MenuEmpleado" EntitySet="MenuEmpleado" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Religion_Cliente" Association="Self.Fk_Religion_Cliente">
+      <End Role="Religion" EntitySet="Religion" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Religion_Empleado" Association="Self.Fk_Religion_Empleado">
+      <End Role="Religion" EntitySet="Religion" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Tipo_Usuario_Cliente" Association="Self.Fk_Tipo_Usuario_Cliente">
+      <End Role="TipoUsuario" EntitySet="TipoUsuario" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Tipo_Usuario_Empleado" Association="Self.Fk_Tipo_Usuario_Empleado">
+      <End Role="TipoUsuario" EntitySet="TipoUsuario" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="ServicioEmpleado_Empleado" Association="Self.ServicioEmpleado_Empleado">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="ServicioEmpleado" EntitySet="ServicioEmpleado" />
+    </AssociationSet>
+    <AssociationSet Name="ServicioEmpleado_Servicio" Association="Self.ServicioEmpleado_Servicio">
+      <End Role="Servicios" EntitySet="Servicios" />
+      <End Role="ServicioEmpleado" EntitySet="ServicioEmpleado" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,5 @@
+c:\users\user\documents\visual studio 2013\Projects\Agencia\Agencia_Datos_Entidades\bin\Debug\Agencia_Datos_Entidades.dll
+c:\users\user\documents\visual studio 2013\Projects\Agencia\Agencia_Datos_Entidades\bin\Debug\Agencia_Datos_Entidades.pdb
+c:\users\user\documents\visual studio 2013\Projects\Agencia\Agencia_Datos_Entidades\obj\Debug\Agencia_Datos_Entidades.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2013\Projects\Agencia\Agencia_Datos_Entidades\obj\Debug\Agencia_Datos_Entidades.dll
+c:\users\user\documents\visual studio 2013\Projects\Agencia\Agencia_Datos_Entidades\obj\Debug\Agencia_Datos_Entidades.pdb
